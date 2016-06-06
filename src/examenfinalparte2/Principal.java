@@ -5,6 +5,10 @@ import javax.swing.JOptionPane;
 public class Principal {
 
     public static void main(String arg[]) {
+        /**
+         * En esta clase main simplemente declaramos variables , y dejamos el for con algunos cambios para asi mostrar los numeros primos.
+         * Entre ellos los cambios son: Usamos el metodo ContarDigitos como contador y el calcularNumPrimo para si es true que salga el numero primo
+         */
         boolean p = false;
         int dig = Integer.parseInt(JOptionPane.showInputDialog(null, "Introduce un numero"));
         int ndig = 0;
@@ -22,7 +26,14 @@ public class Principal {
             }
         }
     }
-
+/**
+ * Este metodo lo que hace es calcular numeros primos 
+ * @param ndig Este parametro es el numero de digitos
+ * @param dig Este es el digito
+ * @param i Este simplemente guarda un numero para acabar viendo numeros primos
+ * @param p Valor de boolean
+ * @return 
+ */
     private static boolean CalcularNumPrimo(int ndig, int dig, int i, boolean p) {
         if (ndig == dig) {
             if (i < 4) {
@@ -60,6 +71,11 @@ public class Principal {
         }
         return p;
     }
+    /**
+     *  Aqui lo que hacemos es un metodo que sirve para contar los digitos
+     * @param i 
+     * @return Retorna el numero de digitos que lo sabemos gracias a un contador
+     */
     private static int ContarDigitos(int i) {
         int aux = i;
         int contador = 0;
